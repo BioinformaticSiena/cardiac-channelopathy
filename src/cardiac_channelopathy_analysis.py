@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """
 Analisi semplificata di varianti genetiche nelle canalopatie cardiache.
 """
@@ -6,7 +9,7 @@ import os
 import pandas as pd
 import argparse
 from sequence_utils import load_sequence, get_protein_sequence
-from src.visualize import plot_variant_distribution, plot_variant_types, generate_summary_report
+from visualize import plot_variant_distribution, plot_variant_types, generate_summary_report
 
 # Definizione dei percorsi ai file
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
@@ -19,8 +22,6 @@ def parse_arguments():
     parser.add_argument("--sequence_file", type=str, required=True, help="File FASTA della sequenza")
     parser.add_argument("--variants_file", type=str, required=True, help="File CSV delle varianti")
     return parser.parse_args()
-
-print(parse_arguments)
 
 def load_variants(file_path):
     """Carica le varianti da un file CSV."""
