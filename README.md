@@ -42,18 +42,6 @@ cardiac-channelopathy/
 
 ## ▶️ Come eseguire il programma
 
-1. Clona la repository:
-   
-   git clone https://github.com/BioinformaticSiena/cardiac-channelopathy.git
-   Assicurati di avere Python installato. Installa Biopython:
-
-2. Assicurati di avere Python installato. 
-
-   Installa Biopython: pip install biopython 
-
-3. Posiziona il file SCN5A.fasta nella cartella data/.
-
-4. Esegui lo script: python src/analisi_scn5a.py
 
 📄 Licenza
 Uso accademico/didattico. Nessuna licenza commerciale applicata.
