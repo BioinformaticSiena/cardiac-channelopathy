@@ -16,7 +16,9 @@ o	Numero di varianti da generare
 o	Seed per la generazione casuale (per riproducibilità)
 o	File di output
 Comando per eseguire script
+
 python3.8 src/generate_scn5a_variants.py --fasta data/SCN5A.fasta --output data/generated_variants.csv --num_variants 50
+
 •	--num_variants: il numero di varianti da generare (default: 20) 
 •	--output: il nome del file di output (default: variants.csv) 
 •	--random_seed: un seme per la generazione casuale, utile se vuoi creare lo stesso set di varianti più volte (default: 42)
