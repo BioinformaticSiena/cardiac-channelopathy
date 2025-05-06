@@ -1,6 +1,8 @@
 # Analisi di Varianti Genetiche nelle Canalopatie Cardiache
 
 Questo progetto nasce come esame del modulo di **Fondamenti di Programmazione in Python** del master: Bioinformatica e data science presso l'Università di Siena. Il nostro obiettivo è sviluppare un semplice programma in Python per analizzare la sequenza del gene **SCN5A**, coinvolto nelle canalopatie cardiache ereditarie.
+Il programma è strutturato per utilizzare come input due file, uno in formato .fasta che contiene la sequenza CDS del gene e uno in formato .csv che contiene sequenze di varianti, e per poi confrontarli in modo da ottenere una serie di informazioni genetiche e generare grafici e report.
+Lo script implementa 
 
 ## 👥 Team
 
