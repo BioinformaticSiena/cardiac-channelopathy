@@ -40,6 +40,14 @@ cardiac-channelopathy/
 ├── README.md # Questo file
 └── requirements.txt # (opzionale) Librerie richieste
 
+cardio_variant_analysis/
+├── data/                  # Dati di input
+├── results/               # Risultati
+└── src/
+    ├── main.py            # Script principale
+    ├── sequence_utils.py  # Funzioni per gestire sequenze
+    └── visualize.py       # Funzioni di visualizzazione
+
 ## ▶️ Come eseguire il programma
 
 
