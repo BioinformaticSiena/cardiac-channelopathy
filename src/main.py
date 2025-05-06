@@ -12,7 +12,7 @@ from sequence_utils import load_sequence, get_protein_sequence
 from visualize import plot_variant_distribution, plot_variant_types, generate_summary_report
 
 # Definizione dei percorsi ai file
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESULTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results")
 
 def parse_arguments():
