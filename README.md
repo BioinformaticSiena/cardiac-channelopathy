@@ -49,7 +49,9 @@ cardio_variant_analysis/
     └── visualize.py       # Funzioni di visualizzazione
 
 ## ▶️ Come eseguire il programma
-
+sequence_utils.py contiene due funzioni principali:
+load_sequence: Carica una sequenza da un file FASTA (o altro formato specificato) utilizzando BioPython
+get_protein_sequence: Analizza la sequenza caricata e determina se è una sequenza nucleotidica o proteica. Se è nucleotidica, cerca di tradurla in proteina trovando il frame di lettura corretto
 
 📄 Licenza
 Uso accademico/didattico. Nessuna licenza commerciale applicata.
