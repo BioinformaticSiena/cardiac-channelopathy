@@ -4,6 +4,26 @@ Questo progetto nasce come esame del modulo di **Fondamenti di Programmazione in
 Il programma è strutturato per utilizzare come input due file, uno in formato .fasta che contiene la sequenza CDS del gene e uno in formato .csv che contiene sequenze di varianti, e per poi confrontarli in modo da ottenere una serie di informazioni genetiche e generare grafici e report.
 Lo script implementa 
 
+GENERAZIONE RANDOM DI VARIANTI PER FILE .csv
+Lo script generate_scn5a_variants.py include le seguenti funzionalità:
+1.	Lettura della sequenza proteica: Legge direttamente il file FASTA del gene SCN5A e lo traduce in proteina.
+2.	Generazione casuale di varianti: Crea varianti genetiche in base a: 
+o	Posizione casuale nella proteina
+o	Tipo di variante (missense, nonsense, frameshift, inserzioni/delezioni)
+o	Classificazione di patogenicità con probabilità configurabili
+3.	Parametrizzazione attraverso linea di comando: 
+o	Numero di varianti da generare
+o	Seed per la generazione casuale (per riproducibilità)
+o	File di output
+Comando per eseguire script
+python3.8 src/generate_scn5a_variants.py --fasta data/SCN5A.fasta --output data/generated_variants.csv --num_variants 50
+•	--num_variants: il numero di varianti da generare (default: 20) 
+•	--output: il nome del file di output (default: variants.csv) 
+•	--random_seed: un seme per la generazione casuale, utile se vuoi creare lo stesso set di varianti più volte (default: 42)
+Quindi dopo aver create il files con le varianti random si esegue
+python3.8 src/main.py --gene SCN5A --sequence_file data/SCN5A.fasta --variants_file data/generated_variants.csv
+
+
 ## 👥 Team
 
 Organizzazione GitHub: [BioinformaticSiena](https://github.com/BioinformaticSiena)  
