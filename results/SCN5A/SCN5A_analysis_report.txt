@@ -1,0 +1,9 @@
+Report analisi varianti per il gene: SCN5A
+
+Numero totale di varianti: 50
+
+Distribuzione dei tipi di varianti:
+- missense: 37 (74.0%)
+- nonsense: 6 (12.0%)
+- inframe_deletion: 4 (8.0%)
+- frameshift: 3 (6.0%)

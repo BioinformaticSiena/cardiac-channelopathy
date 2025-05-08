@@ -4,12 +4,12 @@ def plot_variant_distribution(variants_df, protein_length, save_path):
     """Crea un grafico della distribuzione delle varianti sulla sequenza proteica."""
     try:
         # Assumiamo che ci sia una colonna "protein_position"
-        positions = variants_df["protein_position"].dropna()
+        positions = variants_df["position"].dropna()
 
         plt.figure(figsize=(12, 6))
         plt.hist(positions, bins=range(0, protein_length+10, 10), edgecolor='black')
         plt.title("Distribuzione delle varianti lungo la proteina")
-        plt.xlabel("Posizione nella proteina")
+        plt.xlabel("Residuo della proteina")
         plt.ylabel("Numero di varianti")
         plt.grid(True)
         plt.tight_layout()
