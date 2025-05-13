@@ -60,18 +60,27 @@ def plot_variant_types(variants_df, output_path):
     type_counts = variants_df["variant_type"].value_counts()
     
     # Crea un grafico a torta
-    plt.pie(type_counts, labels=type_counts.index, autopct="%1.1f%%", 
-            startangle=90, shadow=True)
+    plt.pie(type_counts,
+            labels=type_counts.index,
+            autopct="%1.1f%%", 
+            startangle=90,
+            shadow=True,
+            labeldistance=1.15,  # Aumenta la distanza delle etichette dal centro
+            pctdistance=0.85     # Posiziona le percentuali leggermente più all'interno
+    )
     
     # Aggiungi titolo
     plt.title("Distribuzione dei tipi di varianti")
+    
+     # Migliora il layout
+    plt.tight_layout()
     
     # Salva la figura
     plt.savefig(output_path, dpi=300, bbox_inches="tight")
     plt.close()
     
     print(f"Grafico dei tipi di varianti salvato in: {output_path}")
-
+    
 def generate_summary_report(variants_df, gene_id, output_path):
     """
     Genera un report di riepilogo in formato testo.
