@@ -142,11 +142,11 @@ cardiac-channelopathy/
 🚀 Sviluppi Futuri
 Questo progetto potrebbe essere esteso in diverse direzioni:
 
-Integrazione con dati clinici reali: Sostituire le varianti simulate con dati provenienti da database pubblici come ClinVar o HGMD
-Analisi di conservazione evolutiva: Confrontare le posizioni delle varianti con la conservazione tra specie diverse
-Mappatura su struttura 3D: Visualizzare le varianti sulla struttura tridimensionale del canale Nav1.5
-Predizione di patogenicità: Implementare algoritmi di machine learning per predire l'impatto funzionale delle varianti
-Analisi di domini funzionali: Mappare le varianti sui domini funzionali conosciuti del canale Nav1.5
+- Integrazione con dati clinici reali: Adattare il programma per utilizzare sia varianti provenienti da database pubblici (ClinVar, HGMD) che file di pazienti provenienti da coorti cliniche personali
+- Analisi di conservazione evolutiva: Confrontare le posizioni delle varianti con la conservazione tra specie diverse
+- Mappatura su struttura 3D: Visualizzare le varianti sulla struttura tridimensionale del canale Nav1.5
+- Predizione di patogenicità: Implementare algoritmi di machine learning per predire l'impatto funzionale delle varianti
+- Analisi di domini funzionali: Mappare le varianti sui domini funzionali conosciuti del canale Nav1.5
 
 ## 👥 Team
 
