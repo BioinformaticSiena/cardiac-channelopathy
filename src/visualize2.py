@@ -18,22 +18,33 @@ def plot_variant_distribution(variants_df, protein_length, output_path):
         protein_length (int): Lunghezza della proteina
         output_path (str): Percorso per salvare il grafico
     """
-    plt.figure(figsize=(10, 6))
-    
-    # Crea un istogramma delle posizioni delle varianti
-    plt.hist(variants_df["position"], bins=20, alpha=0.7)
-    
-    # Aggiungi titolo e etichette
-    plt.title("Distribuzione delle varianti genetiche")
-    plt.xlabel("Posizione aminoacidica")
-    plt.ylabel("Numero di varianti")
-    plt.grid(True, linestyle="--", alpha=0.7)
-    
-    # Salva la figura
-    plt.savefig(output_path, dpi=300, bbox_inches="tight")
-    plt.close()
-    
-    print(f"Grafico della distribuzione delle varianti salvato in: {output_path}")
+    try:
+        # Ottieni le posizioni delle varianti, eliminando valori NaN
+        positions = variants_df["position"].dropna()
+        
+        # Crea la figura con dimensioni appropriate
+        plt.figure(figsize=(12, 6))
+        
+        # Crea un istogramma con bin basati sulla lunghezza della proteina
+        plt.hist(positions, bins=range(0, protein_length+10, 10), 
+                 edgecolor='black', alpha=0.7)
+        
+        # Aggiungi titolo e etichette
+        plt.title("Distribuzione delle varianti lungo la proteina")
+        plt.xlabel("Posizione aminoacidica")
+        plt.ylabel("Numero di varianti")
+        plt.grid(True, linestyle="--", alpha=0.7)
+        
+        # Migliora il layout
+        plt.tight_layout()
+        
+        # Salva la figura con alta qualità
+        plt.savefig(output_path, dpi=300, bbox_inches="tight")
+        plt.close()
+        
+        print(f"Grafico della distribuzione delle varianti salvato in: {output_path}")
+    except Exception as e:
+        print(f"Errore nella creazione del grafico di distribuzione: {str(e)}")
 
 def plot_variant_types(variants_df, output_path):
     """
